@@ -1,11 +1,10 @@
 import datetime
-from dateutil import tz
 import json
 from pathlib import Path
 
 import pytest
 
-from mlbcal.main import lookup_team_id, parse_datetime
+from . import lookup_team_id, parse_datetime
 
 
 TOTAL_MLB_TEAMS = 30
@@ -35,4 +34,4 @@ def test_valid_lookup_team_id() -> None:
 
 
 def test_parse_datetime() -> None:
-    assert parse_datetime('2022-10-02T20:10:00Z') == datetime.datetime(2022, 10, 2, 20, 10, tzinfo=tz.tzutc())
+    assert parse_datetime('2022-10-02T20:10:00Z') == datetime.datetime(2022, 10, 2, 20, 10, tzinfo=datetime.timezone.utc)
