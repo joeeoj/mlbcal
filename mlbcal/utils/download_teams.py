@@ -47,4 +47,4 @@ if __name__ == '__main__':
     parsed = parse_results(teams)
 
     with open(LOOKUP_FNAME, 'wt') as f:
-        json.dump(teams, f, indent=2)
+        json.dump(parsed, f, indent=2)
