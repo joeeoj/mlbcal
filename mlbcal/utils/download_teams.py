@@ -24,7 +24,7 @@ def download(url: str, year: int = YEAR) -> dict:
 
 def parse_results(teams: List[dict]) -> dict:
     """Parse team results into team_id -> [names] dict"""
-    keys = ['abbreviation', 'teamCode', 'clubName', 'franchiseName', 'shortName']
+    keys = ['abbreviation', 'teamCode', 'clubName', 'shortName']
     parsed = defaultdict(list)
 
     for team in teams:
